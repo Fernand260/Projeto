@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="stylesheet" href="css/esilo.css" />
+    <link rel="shortcut icon" href="img/oie_transparent.ico" </head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio</a>
+            </li>
+
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+
+            <li>
+                <a href="#contatos" class="menu-link">Contatos</a>
+            </li>
+            <header class="instaa2"> <a href="https://www.instagram.com/lufernandd26/" target="_blank"><ion-icon name="logo-instagram"></ion-icon class="instagram"></a></header>
+            <header class="twilter"><a href="https://x.com/Mr_Teubaldo" target="_blank"><ion-icon name="logo-twitter"></ion-icon class="whitter"></a> </header>
+            <header class="github" ><a href="https://github.com/Fernand260" target="_blank" ><ion-icon name="logo-github"></ion-icon></a></header>
+    </main>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="./img/Fernandos.jpg" alt="Foto de Fernando Marques" class="foto-perfil">
+            <h1>Fernando Marques</h1>
+            <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>    
+        </div>
+
+    </main>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Olá! Sou um desenvolvedor front-end em treinamento fascinado por criar
+                experiências
+                web únicas e melhoráveis. Combino código limpo com desing moderno para desenvolver sites que não
+                funcionam perfeitamente,
+                mas também impressionanates visualmente.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="img/projetoJIN.png" alt="Projeto1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Site Estudantil</h3>
+                    <p class="paragrafo-projetos">Um site estudantil que oferece materiais de apoio, exercícios e dicas para auxiliar nos estudos. 
+                        Ideal para alunos que buscam reforço escolar e organização acadêmica.</p> <header class="info-projetos2">
+                            <a href="http://127.0.0.1:5501/index1.html" class="clique">clique aqui!</a></header>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/viagem.png" alt="Projeto2" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Página de viagens Interativo</h3>
+                    <p class="paragrafo-projetos">Um site de viagens interativo que permite explorar destinos com mapas dinâmicos, 
+                        vídeos e experiências de outros viajantes. Planeje sua próxima aventura de forma imersiva e personalizada.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/projeto3.png" alt="Projeto3" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Roteiro de viagens internacional</h3>
+                    <p class="paragrafo-projetos">Um site especializado em viagens internacionais, 
+                        com informações sobre destinos, vistos, câmbio e roteiros personalizados. Ideal para quem deseja explorar o mundo com planejamento e confiança.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsAp</button>
+        </form>
+    </section>
+    <script>
+
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '558592215563';
+
+            const texto = `Olá Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://whatsa.me/{telefone}/?t=${msgFormatada}`
+
+            console.log(url)
+
+            window.open(url, '_blank')
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
